@@ -1,0 +1,14 @@
+{
+    "name": "@webtone/parser",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rossng/webtone.git",
+        "directory": "packages/parser"
+    },
+    "author": "Ross Gardiner",
+    "license": "BlueOak-1.0.0",
+    "bugs": {
+        "url": "https://github.com/rossng/webtone/issues"
+    },
+    "homepage": "https://github.com/rossng/webtone#readme"
+}

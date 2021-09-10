@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "install",
+            "problemMatcher": [],
+            "label": "pnpm: install",
+            "detail": "Install dependencies."
+        },
+        {
+            "type": "npm",
+            "options": {
+                "cwd": "examples/vanilla-ts"
+            },
+            "script": "dev",
+            "isBackground": true,
+            "problemMatcher": [],
+            "label": "pnpm: run vanilla-ts example",
+            "detail": "Run vanilla-ts example."
+        }
+    ]
+}
