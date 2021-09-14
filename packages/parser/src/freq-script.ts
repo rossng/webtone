@@ -1,10 +1,9 @@
-import { apply, list_sc, rule, seq, str, tok, Token } from "typescript-parsec";
+import { apply, kright, list_sc, rule, seq, tok, Token } from "typescript-parsec";
 import { AstNodeKind, FreqScript, FrequencyComponent } from "./ast";
 import { TokenKind } from "./lexer";
 
-function applyFrequencyComponent([freq, _, level]: [
+function applyFrequencyComponent([freq, level]: [
     Token<TokenKind.Number>,
-    Token<TokenKind.At>,
     Token<TokenKind.Number>
 ]): FrequencyComponent {
     return {
@@ -25,7 +24,7 @@ export const FREQUENCY_COMPONENT = rule<TokenKind, FrequencyComponent>();
 export const FREQ_SCRIPT = rule<TokenKind, FreqScript>();
 
 FREQUENCY_COMPONENT.setPattern(
-    apply(seq(tok(TokenKind.Number), tok(TokenKind.At), tok(TokenKind.Number)), applyFrequencyComponent)
+    apply(seq(tok(TokenKind.Number), kright(tok(TokenKind.At), tok(TokenKind.Number))), applyFrequencyComponent)
 );
 
-FREQ_SCRIPT.setPattern(apply(list_sc(FREQUENCY_COMPONENT, str(",")), applyFreqScript));
+FREQ_SCRIPT.setPattern(apply(list_sc(FREQUENCY_COMPONENT, tok(TokenKind.Comma)), applyFreqScript));
