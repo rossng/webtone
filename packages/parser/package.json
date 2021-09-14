@@ -10,5 +10,11 @@
     "bugs": {
         "url": "https://github.com/rossng/webtone/issues"
     },
-    "homepage": "https://github.com/rossng/webtone#readme"
+    "homepage": "https://github.com/rossng/webtone#readme",
+    "scripts": {
+        "test": "jest"
+    },
+    "dependencies": {
+        "typescript-parsec": "^0.3.2"
+    }
 }

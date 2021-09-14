@@ -17,6 +17,5 @@
             }
         }
     ],
-    "importOrder": [],
-    "importOrderSeparation": true
+    "plugins": ["./node_modules/prettier-plugin-organize-imports"]
 }
