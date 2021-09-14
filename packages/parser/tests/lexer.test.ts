@@ -29,6 +29,29 @@ const freqTests = [
             { text: "-19", kind: TokenKind.Number },
         ],
     },
+    {
+        input: "350@-19,440@-19;10(*/0/1+2)",
+        tokens: [
+            { text: "350", kind: TokenKind.Number },
+            { text: "@", kind: TokenKind.At },
+            { text: "-19", kind: TokenKind.Number },
+            { text: ",", kind: TokenKind.Comma },
+            { text: "440", kind: TokenKind.Number },
+            { text: "@", kind: TokenKind.At },
+            { text: "-19", kind: TokenKind.Number },
+            { text: ";", kind: TokenKind.Semicolon },
+            { text: "10", kind: TokenKind.Number },
+            { text: "(", kind: TokenKind.OpenParen },
+            { text: "*", kind: TokenKind.Star },
+            { text: "/", kind: TokenKind.Slash },
+            { text: "0", kind: TokenKind.Number },
+            { text: "/", kind: TokenKind.Slash },
+            { text: "1", kind: TokenKind.Number },
+            { text: "+", kind: TokenKind.Plus },
+            { text: "2", kind: TokenKind.Number },
+            { text: ")", kind: TokenKind.CloseParen },
+        ],
+    },
 ];
 
 describe.each(freqTests)("With input '$input'", ({ input, tokens }) => {
