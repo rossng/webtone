@@ -1,4 +1,5 @@
-import { apply, kleft, list_sc, rule, seq, tok } from "typescript-parsec";
+import { apply, expectEOF, expectSingleResult, kleft, list_sc, rule, seq, tok } from "typescript-parsec";
+import { lexer } from ".";
 import { AstNodeKind, CadenceSection, FreqScript, ToneScript } from "./ast";
 import { CADENCE_SECTION } from "./cadence-section";
 import { FREQ_SCRIPT } from "./freq-script";
@@ -23,3 +24,7 @@ TONE_SCRIPT.setPattern(
         applyToneScript
     )
 );
+
+export function parseToneScript(source: string): ToneScript {
+    return expectSingleResult(expectEOF(TONE_SCRIPT.parse(lexer.parse(source))));
+}

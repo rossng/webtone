@@ -1,5 +1,6 @@
 {
     "name": "@webtone/parser",
+    "type": "module",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/rossng/webtone.git",
@@ -12,9 +13,21 @@
     },
     "homepage": "https://github.com/rossng/webtone#readme",
     "scripts": {
+        "build": "vite",
         "test": "jest"
     },
     "dependencies": {
         "typescript-parsec": "^0.3.2"
+    },
+    "exports": {
+        ".": "./dist/index.js",
+        "./*": "./dist/*.js"
+    },
+    "typesVersions": {
+        "*": {
+            "./*": [
+                "dist/*"
+            ]
+        }
     }
 }
