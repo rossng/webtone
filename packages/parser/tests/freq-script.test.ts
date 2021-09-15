@@ -2,7 +2,7 @@ import { expectEOF, expectSingleResult } from "typescript-parsec";
 import { FREQ_SCRIPT, lexer } from "../src";
 import { AstNodeKind, FreqScript } from "../src/ast";
 
-function makeFreqScriptAst(components: [frequency: number, level: number][]): FreqScript {
+export function makeFreqScriptAst(components: [frequency: number, level: number][]): FreqScript {
     return {
         kind: AstNodeKind.FreqScript,
         frequencyComponents: components.map(([frequency, level]) => ({
