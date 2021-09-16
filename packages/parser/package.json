@@ -13,21 +13,30 @@
     },
     "homepage": "https://github.com/rossng/webtone#readme",
     "scripts": {
-        "build": "vite",
+        "build": "tsc --build",
+        "clean": "tsc --build --clean",
         "test": "jest"
     },
     "dependencies": {
         "typescript-parsec": "^0.3.2"
     },
+    "files": [
+        "dist"
+    ],
+    "module": "./dist/index.js",
     "exports": {
         ".": "./dist/index.js",
         "./*": "./dist/*.js"
     },
+    "types": "./dist/index.d.ts",
     "typesVersions": {
         "*": {
             "./*": [
-                "dist/*"
+                "dist/*.js"
             ]
         }
+    },
+    "engines": {
+        "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
     }
 }

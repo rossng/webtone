@@ -1,8 +1,16 @@
 {
     "name": "@webtone/example-vanilla-ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rossng/webtone.git",
+        "directory": "examples/vanilla-ts"
+    },
+    "author": "Ross Gardiner",
+    "license": "BlueOak-1.0.0",
     "scripts": {
         "dev": "vite",
-        "build": "tsc && vite build",
+        "clean": "tsc --build --clean",
+        "build": "tsc --build && vite build",
         "serve": "vite preview"
     },
     "dependencies": {

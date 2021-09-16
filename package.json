@@ -6,7 +6,6 @@
         "url": "git+https://github.com/rossng/webtone.git"
     },
     "scripts": {
-        "build": "tsc --build",
         "preinstall": "npx -y only-allow pnpm",
         "lint-staged": "lint-staged",
         "prepare": "husky install",
