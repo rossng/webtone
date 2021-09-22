@@ -1,9 +1,9 @@
 {
-    "name": "@webtone/example-vanilla-ts",
+    "name": "@webtone/example-react-ts",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/rossng/webtone.git",
-        "directory": "examples/vanilla-ts"
+        "directory": "examples/react-ts"
     },
     "author": "Ross Gardiner",
     "license": "BlueOak-1.0.0",
@@ -14,11 +14,23 @@
         "serve": "vite preview"
     },
     "dependencies": {
+        "@chakra-ui/hooks": "^1.6.0",
+        "@chakra-ui/react": "^1.6.8",
+        "@emotion/react": "^11",
+        "@emotion/styled": "^11",
         "@webtone/ast": "workspace:*",
         "@webtone/parser": "workspace:*",
-        "@webtone/player": "workspace:*"
+        "@webtone/player": "workspace:*",
+        "@webtone/tone-library": "workspace:*",
+        "framer-motion": "^4",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-hook-form": "^7.15.4"
     },
     "devDependencies": {
+        "@types/react": "^17.0.24",
+        "@types/react-dom": "^17.0.9",
+        "@vitejs/plugin-react": "^1.0.0",
         "tsc-watch": "^4.5.0",
         "typescript": "^4.4.3",
         "vite": "^2.5.10"

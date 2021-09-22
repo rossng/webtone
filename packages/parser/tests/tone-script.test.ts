@@ -1,5 +1,7 @@
+import { AstNodeKind, ToneScript } from "@webtone/ast";
 import { expectEOF, expectSingleResult } from "typescript-parsec";
-import { AstNodeKind, lexer, ToneScript, TONE_SCRIPT } from "../src";
+import { lexer } from "../src/lexer";
+import { TONE_SCRIPT } from "../src/tone-script";
 import { makeCadenceSectionAst } from "./cadence-section.test";
 import { makeFreqScriptAst } from "./freq-script.test";
 

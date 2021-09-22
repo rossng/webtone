@@ -1,4 +1,4 @@
-import { ToneScript } from "@webtone/parser";
+import { ToneScript } from "@webtone/ast";
 import * as Tone from "tone";
 
 interface NoteEvent {

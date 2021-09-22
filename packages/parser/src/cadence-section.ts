@@ -1,5 +1,5 @@
+import { AstNodeKind, CadenceSection, CadenceSubsection } from "@webtone/ast";
 import { alt, apply, kleft, kmid, list_sc, rule, seq, tok, Token } from "typescript-parsec";
-import { AstNodeKind, CadenceSection, CadenceSubsection } from "./ast";
 import { TokenKind } from "./lexer";
 
 function applyFrequencyComponentReferences(value: Token<TokenKind.Number>[]): number[] {

@@ -5,5 +5,5 @@
         "outDir": "dist"
     },
     "include": ["src"],
-    "references": [{ "path": "../ast/tsconfig.ref.json" }]
+    "references": [{ "path": "../parser/tsconfig.ref.json" }]
 }

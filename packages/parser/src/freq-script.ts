@@ -1,5 +1,5 @@
+import { AstNodeKind, FreqScript, FrequencyComponent } from "@webtone/ast";
 import { apply, kright, list_sc, rule, seq, tok, Token } from "typescript-parsec";
-import { AstNodeKind, FreqScript, FrequencyComponent } from "./ast";
 import { TokenKind } from "./lexer";
 
 function applyFrequencyComponent([freq, level]: [

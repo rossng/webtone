@@ -1,6 +1,6 @@
+import { AstNodeKind, CadenceSection } from "@webtone/ast";
 import { expectEOF, expectSingleResult } from "typescript-parsec";
 import { CADENCE_SECTION, lexer } from "../src";
-import { AstNodeKind, CadenceSection } from "../src/ast";
 
 export function makeCadenceSectionAst(
     duration: number,

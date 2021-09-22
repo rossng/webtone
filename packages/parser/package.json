@@ -18,6 +18,7 @@
         "test": "jest"
     },
     "dependencies": {
+        "@webtone/ast": "workspace:*",
         "typescript-parsec": "^0.3.2"
     },
     "files": [

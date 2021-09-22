@@ -1,4 +1,5 @@
-import { parseToneScript, ToneScript } from "@webtone/parser";
+import { ToneScript } from "@webtone/ast";
+import { parseToneScript } from "@webtone/parser";
 import { ToneScriptPlayer } from "@webtone/player";
 import "./style.css";
 
@@ -6,6 +7,7 @@ const inputEl = document.querySelector<HTMLTextAreaElement>("#input");
 const parseEl = document.querySelector<HTMLButtonElement>("#parse");
 const astEl = document.querySelector<HTMLPreElement>("#ast");
 const playEl = document.querySelector<HTMLButtonElement>("#play");
+const toneLibraryEl = document.querySelector<HTMLDivElement>("#tone-library");
 
 let ast: ToneScript | null = null;
 let player: ToneScriptPlayer | null;
@@ -37,8 +39,8 @@ async function updateToneScript(): Promise<void> {
     }
 }
 
-if ([inputEl, parseEl, astEl, playEl].some((x) => !x)) {
-    console.error("Missing element", { inputEl, parseEl, astEl, playEl });
+if ([inputEl, parseEl, astEl, playEl, toneLibraryEl].some((x) => !x)) {
+    console.error("Missing element", { inputEl, parseEl, astEl, playEl, toneLibraryEl });
 } else {
     parseEl?.addEventListener("click", updateToneScript);
 
@@ -58,5 +60,5 @@ if ([inputEl, parseEl, astEl, playEl].some((x) => !x)) {
         }
     });
 
-    await updateToneScript();
+    updateToneScript();
 }

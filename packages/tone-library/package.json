@@ -1,10 +1,10 @@
 {
-    "name": "@webtone/player",
+    "name": "@webtone/tone-library",
     "type": "module",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/rossng/webtone.git",
-        "directory": "packages/player"
+        "directory": "packages/tone-library"
     },
     "author": "Ross Gardiner",
     "license": "BlueOak-1.0.0",
@@ -18,8 +18,9 @@
         "test": "jest"
     },
     "dependencies": {
-        "@webtone/ast": "workspace:*",
-        "tone": "^14.7.77"
+        "@webtone/parser": "workspace:*",
+        "tone": "^14.7.77",
+        "typescript-parsec": "^0.3.2"
     },
     "files": [
         "dist"

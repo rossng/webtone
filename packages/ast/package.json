@@ -1,10 +1,10 @@
 {
-    "name": "@webtone/player",
+    "name": "@webtone/ast",
     "type": "module",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/rossng/webtone.git",
-        "directory": "packages/player"
+        "directory": "packages/ast"
     },
     "author": "Ross Gardiner",
     "license": "BlueOak-1.0.0",
@@ -17,10 +17,7 @@
         "clean": "tsc --build --clean",
         "test": "jest"
     },
-    "dependencies": {
-        "@webtone/ast": "workspace:*",
-        "tone": "^14.7.77"
-    },
+    "dependencies": {},
     "files": [
         "dist"
     ],

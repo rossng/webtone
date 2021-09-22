@@ -1,6 +1,6 @@
+import { AstNodeKind, FreqScript } from "@webtone/ast";
 import { expectEOF, expectSingleResult } from "typescript-parsec";
 import { FREQ_SCRIPT, lexer } from "../src";
-import { AstNodeKind, FreqScript } from "../src/ast";
 
 export function makeFreqScriptAst(components: [frequency: number, level: number][]): FreqScript {
     return {
