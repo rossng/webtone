@@ -1,17 +1,62 @@
-import { parseToneScript } from "@webtone/parser";
+import { parseToneScript, ToneScript } from "@webtone/parser";
+import { ToneScriptPlayer } from "@webtone/player";
 import "./style.css";
 
-const app = document.querySelector<HTMLDivElement>("#app");
+const inputEl = document.querySelector<HTMLTextAreaElement>("#input");
+const parseEl = document.querySelector<HTMLButtonElement>("#parse");
+const astEl = document.querySelector<HTMLPreElement>("#ast");
+const playEl = document.querySelector<HTMLButtonElement>("#play");
 
-const exampleToneScript =
-    "392@-19,440@-19,494@-19,294@-19,457@-19;3.5(.7/0/4,.8/0/1,.6/0/1,.5/0/3,.7/0/2,.2/0/1);30(*/0/2+5)";
-const ast = parseToneScript(exampleToneScript);
+let ast: ToneScript | null = null;
+let player: ToneScriptPlayer | null;
 
-if (app) {
-    app.innerHTML = `
-  <h1>Webtone</h1>
-  <p>Input ToneScript: <code>${exampleToneScript}</code></p>
-  <p>Output AST:</p>
-  <pre>${JSON.stringify(ast)}</pre>
-`;
+async function updateToneScript(): Promise<void> {
+    try {
+        await player?.stop();
+    } catch {
+        // Player already stopped
+    }
+    try {
+        ast = parseToneScript(inputEl?.value?.trim() ?? "");
+        if (astEl) {
+            astEl.textContent = JSON.stringify(ast, null, 2);
+        }
+        if (playEl) {
+            playEl.textContent = "Play";
+            playEl.disabled = false;
+        }
+    } catch (err) {
+        console.warn("Error parsing ToneScript", { err });
+        if (astEl) {
+            astEl.textContent = "Could not parse.";
+        }
+        if (playEl) {
+            playEl.textContent = "Play";
+            playEl.disabled = true;
+        }
+    }
+}
+
+if ([inputEl, parseEl, astEl, playEl].some((x) => !x)) {
+    console.error("Missing element", { inputEl, parseEl, astEl, playEl });
+} else {
+    parseEl?.addEventListener("click", updateToneScript);
+
+    playEl?.addEventListener("click", async () => {
+        if (ast && !player?.playing) {
+            player = new ToneScriptPlayer(ast);
+            await player.enable();
+            player.play();
+            if (playEl) {
+                playEl.textContent = "Stop";
+            }
+        } else {
+            player?.stop();
+            if (playEl) {
+                playEl.textContent = "Play";
+            }
+        }
+    });
+
+    await updateToneScript();
 }

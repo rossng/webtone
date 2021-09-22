@@ -15,5 +15,8 @@
         "noImplicitReturns": true
     },
     "include": ["./src"],
-    "references": [{ "path": "../../packages/parser/tsconfig.ref.json" }]
+    "references": [
+        { "path": "../../packages/parser/tsconfig.ref.json" },
+        { "path": "../../packages/player/tsconfig.ref.json" }
+    ]
 }

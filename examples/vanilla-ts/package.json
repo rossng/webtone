@@ -8,16 +8,18 @@
     "author": "Ross Gardiner",
     "license": "BlueOak-1.0.0",
     "scripts": {
-        "dev": "vite",
+        "dev": "tsc-watch --build --onFirstSuccess \"vite\"",
         "clean": "tsc --build --clean",
         "build": "tsc --build && vite build",
         "serve": "vite preview"
     },
     "dependencies": {
-        "@webtone/parser": "workspace:*"
+        "@webtone/parser": "workspace:*",
+        "@webtone/player": "workspace:*"
     },
     "devDependencies": {
-        "typescript": "^4.3.2",
-        "vite": "^2.5.4"
+        "tsc-watch": "^4.5.0",
+        "typescript": "^4.4.3",
+        "vite": "^2.5.10"
     }
 }

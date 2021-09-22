@@ -1,0 +1,44 @@
+{
+    "name": "@webtone/player",
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rossng/webtone.git",
+        "directory": "packages/player"
+    },
+    "author": "Ross Gardiner",
+    "license": "BlueOak-1.0.0",
+    "bugs": {
+        "url": "https://github.com/rossng/webtone/issues"
+    },
+    "homepage": "https://github.com/rossng/webtone#readme",
+    "scripts": {
+        "build": "tsc --build",
+        "clean": "tsc --build --clean",
+        "test": "jest"
+    },
+    "dependencies": {
+        "@webtone/parser": "workspace:*",
+        "tone": "^14.7.77",
+        "typescript-parsec": "^0.3.2"
+    },
+    "files": [
+        "dist"
+    ],
+    "module": "./dist/index.js",
+    "exports": {
+        ".": "./dist/index.js",
+        "./*": "./dist/*.js"
+    },
+    "types": "./dist/index.d.ts",
+    "typesVersions": {
+        "*": {
+            "./*": [
+                "dist/*.js"
+            ]
+        }
+    },
+    "engines": {
+        "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+    }
+}

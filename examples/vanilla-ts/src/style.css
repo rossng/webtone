@@ -1,8 +1,33 @@
-#app {
+body {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+}
+
+#form {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 120ch;
+}
+
+#input {
+    max-width: 100%;
+    text-align: left;
+    width: 120ch;
+}
+
+#ast {
+    background-color: #eee;
+    max-height: 30em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em;
+    text-align: left;
+    width: max-content;
 }

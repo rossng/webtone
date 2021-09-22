@@ -3,6 +3,9 @@
     "references": [
         {
             "path": "./packages/parser/tsconfig.ref.json"
+        },
+        {
+            "path": "./packages/player/tsconfig.ref.json"
         }
     ]
 }
