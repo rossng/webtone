@@ -2,11 +2,14 @@ import { ToneScript } from "@webtone/ast";
 import { createContext, PropsWithChildren, useState } from "react";
 
 function useValue() {
-    const [toneScript, setToneScript] = useState<ToneScript>();
+    const [toneScript, setToneScript] = useState<ToneScript | null>(null);
+    const [parseError, setParseError] = useState<string | null>(null);
 
     return {
         toneScript,
         setToneScript,
+        parseError,
+        setParseError,
     };
 }
 
