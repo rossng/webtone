@@ -10,6 +10,7 @@
         "preinstall": "npx -y only-allow pnpm",
         "lint-staged": "lint-staged",
         "prepare": "husky install",
+        "release": "pnpm build -r && pnpm changeset publish",
         "test": "jest --maxWorkers=50%"
     },
     "author": "Ross Gardiner",
