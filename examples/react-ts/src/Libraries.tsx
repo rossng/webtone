@@ -1,5 +1,14 @@
 import { Box, Flex, Select, Text, useId } from "@chakra-ui/react";
-import { novelty, turkey, uk } from "@webtone/tone-library";
+import {
+    bangladesh,
+    barbados,
+    eswatini,
+    miscellaneous,
+    novelty,
+    turkey,
+    uk,
+    unitedStates,
+} from "@webtone/tone-library";
 import React, { useState } from "react";
 import { Library } from "./Library";
 
@@ -9,6 +18,11 @@ export function Libraries(): JSX.Element {
         uk,
         turkey,
         novelty,
+        barbados,
+        bangladesh,
+        eswatini,
+        miscellaneous,
+        unitedStates,
     };
     const [selectedLibrary, setSelectedLibrary] = useState<keyof typeof allLibraries>("uk");
 
