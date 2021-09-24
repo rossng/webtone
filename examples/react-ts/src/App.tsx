@@ -14,7 +14,7 @@ import {
 import React, { Suspense } from "react";
 import { AppProvider } from "./AppProvider";
 import { Ast } from "./Ast";
-import { Libraries } from "./Library";
+import { Libraries } from "./Libraries";
 import { Player } from "./Player";
 
 const Code = React.lazy(() => import("./Code").then((m) => ({ default: m.Code })));
@@ -27,21 +27,24 @@ export function App(): JSX.Element {
                     <Heading as="h1" mb={4}>
                         Webtone React demo
                     </Heading>
-                    <Box my={4}>
+                    <Box my={4} p={4} borderRadius="lg" borderWidth="1px" borderStyle="solid" borderColor="purple.500">
                         <Player />
                     </Box>
                     <Suspense fallback={<Spinner m={4} />}>
                         <Grid
-                            templateColumns="1fr 1fr"
+                            templateColumns="50% 50%"
                             templateRows="minmax(0, 1fr)"
                             flexDir="row"
                             gap={4}
-                            border="1px solid black"
+                            borderRadius="lg"
+                            borderWidth="1px"
+                            borderStyle="solid"
+                            borderColor="purple.500"
                             p={4}
                             h="30rem"
                             alignItems="stretch"
                         >
-                            <Tabs h="100%" display="flex" flexDir="column">
+                            <Tabs h="100%" display="flex" flexDir="column" colorScheme="purple">
                                 <TabList>
                                     <Tab>Editor</Tab>
                                     <Tab>Library</Tab>

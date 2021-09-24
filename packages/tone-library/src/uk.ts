@@ -1,7 +1,7 @@
 import { ToneLibrary } from "./types";
 
 export const uk: ToneLibrary = {
-    title: "UK tones",
+    title: "United Kingdom",
     tones: [
         {
             name: "Busy tone",

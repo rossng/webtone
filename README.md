@@ -13,4 +13,5 @@ Dependencies may have their own licenses and you should check these.
 ## References
 
 - [ToneScript](https://en.wikipedia.org/wiki/ToneScript)
-- [Cisco Support Forum](https://supportforums.cisco.com/thread/2021701)
+- [Cisco documentation](https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/csbpvga/ata/provisioning/guide/Provisioning.pdf)
+- [Cisco Support Forums](https://supportforums.cisco.com/thread/2021701)

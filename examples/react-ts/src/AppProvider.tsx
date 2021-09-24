@@ -4,12 +4,15 @@ import { createContext, PropsWithChildren, useState } from "react";
 function useValue() {
     const [toneScript, setToneScript] = useState<ToneScript | null>(null);
     const [parseError, setParseError] = useState<string | null>(null);
+    const [toneName, setToneName] = useState<string | null>(null);
 
     return {
         toneScript,
         setToneScript,
         parseError,
         setParseError,
+        toneName,
+        setToneName,
     };
 }
 

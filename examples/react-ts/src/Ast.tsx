@@ -1,14 +1,14 @@
-import { Alert, AlertIcon, AlertTitle, chakra, Code, Flex, Heading } from "@chakra-ui/react";
-import { useContext } from "react";
+import { Alert, AlertIcon, AlertTitle, Box, chakra, Code, Flex, Heading } from "@chakra-ui/react";
+import React, { useContext } from "react";
 import { AppContext } from "./AppProvider";
 
 export function Ast(): JSX.Element {
-    const { parseError, toneScript } = useContext(AppContext);
+    const { parseError, toneScript, toneName } = useContext(AppContext);
 
     return (
-        <Flex flexDir="column">
+        <Flex flexDir="column" pr={4}>
             <Heading as="h2" size="md" mb={2}>
-                AST
+                AST: {toneName}
             </Heading>
             {parseError && (
                 <Alert status="error">
@@ -20,9 +20,11 @@ export function Ast(): JSX.Element {
                 </Alert>
             )}
             {toneScript && (
-                <chakra.pre p={4} bgColor="#eee" overflow="auto" flex={1} minH={0}>
-                    {JSON.stringify(toneScript, null, 2)}
-                </chakra.pre>
+                <Box flex={1} minH={0} bgColor="purple.50" borderRadius="lg" alignSelf="stretch" overflow="auto">
+                    <chakra.pre p={4} minW={0} w="100%">
+                        {JSON.stringify(toneScript, null, 2)}
+                    </chakra.pre>
+                </Box>
             )}
         </Flex>
     );
