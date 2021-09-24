@@ -1,10 +1,13 @@
 import { Box, Flex, Select, Text, useId } from "@chakra-ui/react";
 import {
+    angola,
     bangladesh,
     barbados,
     eswatini,
     miscellaneous,
+    netherlands,
     novelty,
+    tokelau,
     turkey,
     uk,
     unitedStates,
@@ -15,13 +18,16 @@ import { Library } from "./Library";
 export function Libraries(): JSX.Element {
     const id = useId();
     const allLibraries = {
-        uk,
-        turkey,
         novelty,
         barbados,
         bangladesh,
         eswatini,
         miscellaneous,
+        netherlands,
+        tokelau,
+        turkey,
+        uk,
+        angola,
         unitedStates,
     };
     const [selectedLibrary, setSelectedLibrary] = useState<keyof typeof allLibraries>("uk");

@@ -2,6 +2,7 @@ import { ToneLibrary } from "./types";
 
 export const turkey: ToneLibrary = {
     title: "Turkey",
+    notes: "From ITU Operational Bulletin No. 781",
     tones: [
         {
             name: "Busy tone",
