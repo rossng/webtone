@@ -14,7 +14,7 @@ let player: ToneScriptPlayer | null;
 
 async function updateToneScript(): Promise<void> {
     try {
-        await player?.stop();
+        await player?.close();
     } catch {
         // Player already stopped
     }
@@ -53,7 +53,8 @@ if ([inputEl, parseEl, astEl, playEl, toneLibraryEl].some((x) => !x)) {
                 playEl.textContent = "Stop";
             }
         } else {
-            player?.stop();
+            player?.pause();
+            player?.close();
             if (playEl) {
                 playEl.textContent = "Play";
             }
