@@ -21,7 +21,7 @@ export function Ast(): JSX.Element {
             )}
             {toneScript && (
                 <Box flex={1} minH={0} bgColor="purple.50" borderRadius="lg" alignSelf="stretch" overflow="auto">
-                    <chakra.pre p={4} minW={0} w="100%">
+                    <chakra.pre p={4} minW={0} fontSize="xs" w="100%">
                         {JSON.stringify(toneScript, null, 2)}
                     </chakra.pre>
                 </Box>

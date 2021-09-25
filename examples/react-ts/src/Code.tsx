@@ -1,6 +1,5 @@
 import { Button, FormControl, FormErrorMessage, FormLabel, Text, Textarea, VisuallyHidden } from "@chakra-ui/react";
 import { parseToneScript } from "@webtone/parser";
-import { uk } from "@webtone/tone-library";
 import React, { useCallback, useContext, useEffect } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { AppContext } from "./AppProvider";
@@ -19,7 +18,8 @@ export function Code(): JSX.Element {
         control,
     } = useForm<FormData>({
         defaultValues: {
-            toneScript: uk.tones?.[0]?.tonescript ?? "",
+            toneScript:
+                "349@-21,392@-21,440@-21,466@-21,523@-24,540@-24;2.1(.6/0/3,.2/0/2,.7/0/1,.2/0/2,.2/0/3,.3/0/4);30(*/0/5+6)",
         },
     });
     const toneScriptText = useWatch({ name: "toneScript", control, defaultValue: undefined });
@@ -55,6 +55,10 @@ export function Code(): JSX.Element {
                     <FormLabel>ToneScript</FormLabel>
                 </VisuallyHidden>
                 <Textarea
+                    minH="10rem"
+                    color="purple.700"
+                    fontSize="lg"
+                    fontWeight="medium"
                     {...register("toneScript", {
                         required: true,
                         validate: (value) => {

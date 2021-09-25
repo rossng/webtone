@@ -1,4 +1,4 @@
-import { ToneLibrary } from "./types";
+import { ToneLibrary } from "../types";
 
 export const uk: ToneLibrary = {
     title: "United Kingdom",

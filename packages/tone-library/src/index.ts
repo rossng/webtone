@@ -1,12 +1,4 @@
-export * from "./angola";
-export * from "./bangladesh";
-export * from "./barbados";
-export * from "./eswatini";
 export * from "./miscellaneous";
-export * from "./netherlands";
 export * from "./novelty";
-export * from "./tokelau";
-export * from "./turkey";
+export * as countries from "./regional";
 export * from "./types";
-export * from "./uk";
-export * from "./united-states";

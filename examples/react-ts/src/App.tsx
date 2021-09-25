@@ -51,7 +51,7 @@ export function App(): JSX.Element {
                                 </TabList>
 
                                 <TabPanels display="flex" flexDir="column" flex="1" minH={0}>
-                                    <TabPanel minH={0}>
+                                    <TabPanel minH={0} overflowY="auto">
                                         <Code />
                                     </TabPanel>
                                     <TabPanel flex="1" display="flex" minH={0} pb={0}>
