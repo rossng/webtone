@@ -9,5 +9,5 @@ export * from "./latvia";
 export * from "./netherlands";
 export * from "./tokelau";
 export * from "./turkey";
-export * from "./uk";
+export * from "./united-kingdom";
 export * from "./united-states";

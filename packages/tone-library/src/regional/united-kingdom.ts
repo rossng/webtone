@@ -1,6 +1,6 @@
 import { ToneLibrary } from "../types";
 
-export const uk: ToneLibrary = {
+export const unitedKingdom: ToneLibrary = {
     title: "United Kingdom",
     notes: "From ITU Operational Bulletin No. 781",
     tones: [

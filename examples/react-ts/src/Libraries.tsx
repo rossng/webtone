@@ -10,7 +10,7 @@ export function Libraries(): JSX.Element {
         miscellaneous,
         ...countries,
     };
-    const [selectedLibrary, setSelectedLibrary] = useState<keyof typeof allLibraries>("uk");
+    const [selectedLibrary, setSelectedLibrary] = useState<keyof typeof allLibraries>("unitedKingdom");
 
     return (
         <Flex flexDir="column" w="100%" alignItems="stretch">
