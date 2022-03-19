@@ -20,16 +20,16 @@
         "test": "jest"
     },
     "dependencies": {
-        "@spectrum-web-components/action-button": "^0.5.8",
-        "@spectrum-web-components/action-group": "^0.4.16",
-        "@spectrum-web-components/button": "^0.14.8",
-        "@spectrum-web-components/icon": "^0.9.11",
-        "@spectrum-web-components/icons": "^0.7.8",
-        "@spectrum-web-components/icons-workflow": "^0.6.11",
-        "@spectrum-web-components/quick-actions": "^0.4.9",
-        "@spectrum-web-components/theme": "^0.8.14",
+        "@spectrum-web-components/action-button": "^0.8.1",
+        "@spectrum-web-components/action-group": "^0.8.1",
+        "@spectrum-web-components/button": "^0.17.1",
+        "@spectrum-web-components/icon": "^0.11.5",
+        "@spectrum-web-components/icons": "^0.8.4",
+        "@spectrum-web-components/icons-workflow": "^0.8.5",
+        "@spectrum-web-components/quick-actions": "^0.6.5",
+        "@spectrum-web-components/theme": "^0.10.1",
         "@webtone/ast": "workspace:*",
-        "lit": "^2.0.0",
+        "lit": "^2.2.1",
         "tone": "^14.7.77"
     },
     "files": [
